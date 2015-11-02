@@ -1,0 +1,23 @@
+extends ./base.jade
+block append style
+    link(rel="stylesheet", type="text/css", href="/assets/style.css")
+block body
+  nav
+    a(href="/login")
+      img#logo(src="/assets/img/face.png", alt="face logo")
+    .navlink
+      a(href="/logout") Log out
+  section#seePage
+    ul#usefulLinks
+      li
+        a(href="http://technotip.com/3860/remove-delete-data-from-mongodb-node-js/") A helpful blog
+      li
+        a(href="http://mongoosejs.com/docs/api.html") Mongoose API
+      li
+        a(href="http://thecodebarbarian.com/2015/03/06/guide-to-mongoose-plugins") Guide to Mongoose Plugins
+      li
+        a(href="https://www.youtube.com/watch?v=ZTidn2dBYbY") A good music video
+  section#footer
+    a(href="/") <<Back
+block scripts
+        script(src="/assest/client.js")
