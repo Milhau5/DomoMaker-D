@@ -44,7 +44,7 @@ var makeDomo = function(req, res) {
 
 };
 
-/*var deleteDomo = function(req, res) {
+var deleteDomo = function(req, res) {
   //delete a 'domoData' JSON object
   //.remove from the database......a mongoose query
   //use ids
@@ -52,7 +52,7 @@ var makeDomo = function(req, res) {
    //this should remove a domo from the id of the current user
    //this might actually get rid of all of them, though
    //db.domos.remove({}), where 'domos' is the collection, could use findByIdAndRemove with err,docs
-  Domo.DomoModel.remove({_id: }, function(err) {
+  Domo.DomoModel.remove({_id: req.params._id}, function(err) {
     if(err) {
       //console.log(err);
       res.json(err);
@@ -66,8 +66,8 @@ else{
   }
   });
 
-};*/
+};
 
 module.exports.makerPage = makerPage;
 module.exports.make = makeDomo;
-//module.exports.deleteDomo = deleteDomo;
+module.exports.deleteDomo = deleteDomo;

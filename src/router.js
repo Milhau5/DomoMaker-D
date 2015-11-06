@@ -11,7 +11,7 @@ var router = function(app) {
    app.get("/new", mid.requiresLogin, controllers.Account.newPage);
    app.get("/maker", mid.requiresLogin, controllers.Domo.makerPage);
    app.post("/maker", mid.requiresLogin, controllers.Domo.make);
-   //app.get("/killer", mid.requiresLogin, controllers.Domo.deleteDomo); //'/Domo/:_id/delete'
+   app.get("/killer/:_id", mid.requiresLogin, controllers.Domo.deleteDomo); //'/Domo/:_id/delete'
    app.get("/", mid.requiresSecure, mid.requiresLogout, controllers.Account.loginPage);
 };
 
